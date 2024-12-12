@@ -1,0 +1,33 @@
+name: Send Email via Mailgun
+
+on:
+  workflow_dispatch:
+    inputs:
+      recipient:
+        description: 'Recipient Email'
+        required: true
+      subject:
+        description: 'Email Subject'
+        required: true
+
+jobs:
+  send-email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Email via Mailgun API
+        env:
+          MAILGUN_API_KEY: ${{ secrets.MAILGUN_TOKEN }}
+          MAILGUN_DOMAIN: ${{ secrets.MAILGUN_DOMAIN }}
+        run: |
+          curl -s --user "api:$MAILGUN_API_KEY" \
+            https://api.mailgun.net/v3/$MAILGUN_DOMAIN/messages \
+            -F from="admin@metamagagency.com" \
+            -F to="${{ github.event.inputs.recipient }}" \
+            -F subject="${{ github.event.inputs.subject }}" \
+            -F text="Bienvenido a METAMAG AGENCY
+
+            Hola,
+
+            Soy Marie Anne Grace, CEO de METAMAG AGENCY,
+
+            ¡Gracias por suscribirte! Me emociona conocerte y ofrecerte soluciones innovadoras en marketing, Growth y tecnología."
