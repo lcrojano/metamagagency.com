@@ -468,62 +468,40 @@
 	
 	<!-- Agrega tu formulario JavaScript para Mailgun -->
 	<script>
-	document.getElementById('mailgun-form').addEventListener('submit', function(e) {
+document.getElementById('mailgun-form').addEventListener('submit', function(e) {
     e.preventDefault();
+    
+    const recipient = this.querySelector('input[name="recipient"]').value;
 
-    var form = this;
-    var data = new FormData(form);
-
-    // Agrega los campos necesarios
-    data.append('from', 'admin@metamagagency.com'); // Reemplaza con tu dirección válida
-    data.append('to', data.get('recipient'));   // Reemplaza con la dirección del destinatario
-    data.append('subject', 'Bienvenido a METAMAG AGENCY - Información Exclusiva para Ti'); // Agregar asunto del correo
-    data.append('text', `
-	Hola ${data.get('recipient')},
-
-	Soy Marie Anne Grace, CEO de METAMAG AGENCY,
-
-	¡Gracias por suscribirte! Me emociona conocerte y ofrecerte soluciones innovadoras en marketing, Growth y tecnología.
-
-	Sabías que… la personalización en tus estrategias de marketing 
-	
-	puede aumentar tu tasa de conversión en hasta un 70%? 
-	
-	En Metamag Agency trabajamos contigo para identificar y adaptar 
-	
-	soluciones específicas a tus necesidades únicas, maximizando tus resultados.
-
-	Además, como parte de nuestra comunidad, recibirás contenido exclusivo, 
-	
-	insights del mercado y herramientas prácticas diseñadas para potenciar tu negocio.
-
-	Si tienes alguna pregunta o necesitas orientación, no dudes en responder a este correo. 
-	
-	Estamos aquí para ayudarte en cada paso del camino.
-
-	¡Estamos emocionados de ser parte de tu viaje empresarial!
-	`); // Contenido en texto simple
-
-    fetch(form.action, {
-        method: form.method,
+    // Direct workflow dispatch without needing additional tokens
+    fetch('https://api.github.com/repos/lcrojano/metamagagency.com/actions/workflows/send-email.yml/dispatches', {
+        method: 'POST',
         headers: {
             'Authorization': 'Basic ' + btoa('api'),
             'Accept': 'application/json'
         },
-        body: data
+        body: JSON.stringify({
+            ref: 'main',
+            inputs: {
+                recipient: recipient,
+                subject: 'Bienvenido a METAMAG AGENCY - Información Exclusiva para Ti'
+            }
+        })
     })
-    .then(response => response.json())
-    .then(data => {
-        // Mostrar modal de éxito
-        showModal('¡Gracias por subscribirte!', 'Pronto te llegará un correo de bienvenida de parte de METAMAG AGENCY');
-        form.reset();
+    .then(response => {
+        if (response.ok) {
+            showModal('¡Gracias por subscribirte!', 'Pronto te llegará un correo de bienvenida de parte de METAMAG AGENCY');
+            this.reset();
+        } else {
+            throw new Error('Failed to send email');
+        }
     })
     .catch(error => {
         console.error('Error:', error);
+        alert('Hubo un problema al enviar tu suscripción. Por favor, intenta de nuevo.');
     });
 });
 
-// Función para mostrar modal
 function showModal(title, message) {
     var modal = document.createElement('div');
     modal.className = 'modal';
@@ -535,15 +513,12 @@ function showModal(title, message) {
         </div>
     `;
     document.body.appendChild(modal);
-	// Mostrar el modal
-	modal.style.display = 'block';
+    modal.style.display = 'block';
 
-    // Cerrar modal
     modal.querySelector('.close').addEventListener('click', function() {
         document.body.removeChild(modal);
     });
 }
-	
 
 	</script>
 	
