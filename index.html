@@ -1,0 +1,749 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Metamag Agency S.A.S. BIC</title>
+	<!-- Tailwind -->
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+	<!-- Alpine -->
+	<script type="module" src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+	<script nomodule src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.min.js" defer></script>
+	<!-- AOS -->
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<!-- Custom style -->
+	<link rel="stylesheet" href="css/skilline.css" />
+	<!-- Poppins font -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="antialiased">
+	<!-- navbar -->
+	<div x-data="{ open: false }" class="w-full text-gray-700 bg-cream">
+		<div class="flex flex-col max-w-screen-xl px-8 mx-auto md:items-center md:justify-between md:flex-row">
+			<div class="flex flex-row items-center justify-between py-6">
+				<div class="relative md:mt-8">
+					<a   href="#"
+						class="flex flex-col text-lg relative z-50 font-bold tracking-widest text-gray-900 rounded-lg focus:outline-none focus:shadow-outline text-white">Metamag
+						Agency
+						<span class="">Nit.: 901.884.098-2</span>
+					</a>
+						
+					<svg class="h-11 z-40 absolute -top-2 -left-3" viewBox="0 0 79 79" fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M35.2574 2.24264C37.6005 -0.100501 41.3995 -0.100505 43.7426 2.24264L76.7574 35.2574C79.1005 37.6005 79.1005 41.3995 76.7574 43.7426L43.7426 76.7574C41.3995 79.1005 37.6005 79.1005 35.2574 76.7574L2.24264 43.7426C-0.100501 41.3995 -0.100505 37.6005 2.24264 35.2574L35.2574 2.24264Z"
+							fill="#000" />
+					</svg>
+				</div>
+				<button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+					<svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+						<path x-show="!open" fill-rule="evenodd"
+							d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+							clip-rule="evenodd"></path>
+						<path x-show="open" fill-rule="evenodd"
+							d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+							clip-rule="evenodd"></path>
+					</svg>
+				</button>
+			</div>
+			<nav :class="{ 'transform md:transform-none': !open, 'h-full': open }"
+				class="h-0 md:h-auto flex flex-col flex-grow md:items-center pb-4 md:pb-0 md:flex md:justify-end md:flex-row origin-top duration-300 scale-y-0">
+			<!--	<a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline"
+					href="#">Home</a>
+				<a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline"
+					href="#">Careers</a>
+				<a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline"
+					href="#">Blog</a>
+				<a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline"
+					href="#">About Us</a>
+				<a class="px-10 py-3 mt-2 text-sm text-center bg-white text-gray-800 rounded-full md:mt-8 md:ml-4"
+					href="#">Login</a>
+				<a class="px-10 py-3 mt-2 text-sm text-center bg-yellow-500 text-white rounded-full md:mt-8 md:ml-4"
+					href="#">Sign Up</a>-->
+			</nav>
+		</div>
+	</div>
+	<div class="bg-cream">
+		<div class="max-w-screen-xl px-8 mx-auto flex flex-col lg:flex-row items-start">
+			<!--Left Col-->
+			<div
+				class="flex flex-col w-full lg:w-6/12 justify-center lg:pt-24 items-start text-center lg:text-left mb-5 md:mb-0">
+				<h1 data-aos="fade-right" data-aos-once="true"
+					class="my-4 text-5xl font-bold leading-tight text-darken">
+					<span class="text-white">Metamag Agency</span>
+				</h1>
+				<p data-aos="fade-down" data-aos-once="true" data-aos-delay="300" class="text-white leading-normal text-2xl mb-8">
+					Donde las PYMES se convierten en gigantes digitales </p>
+				<div data-aos="fade-up" data-aos-once="true" data-aos-delay="700"
+					class="w-full md:flex items-center justify-center lg:justify-start md:space-x-5">
+					<a href="https://www.instagram.com/metamag_agency/" target="_blank"
+						class="lg:mx-0 bg-yellow-500 text-white text-xl font-bold rounded-full py-4 px-9 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out">
+						Únete
+					</a>
+					<div
+						class="flex items-center justify-center space-x-3 mt-5 md:mt-0 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out">
+						<a href="https://www.youtube.com/@METAMAGAGENCY" target="_blank" class="bg-white w-14 h-14 rounded-full flex items-center justify-center">
+							<svg class="w-5 h-5 ml-2" viewBox="0 0 24 28" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M22.5751 12.8097C23.2212 13.1983 23.2212 14.135 22.5751 14.5236L1.51538 27.1891C0.848878 27.5899 5.91205e-07 27.1099 6.25202e-07 26.3321L1.73245e-06 1.00123C1.76645e-06 0.223477 0.848877 -0.256572 1.51538 0.14427L22.5751 12.8097Z"
+									fill="#23BDEE" />
+							</svg>
+						</a>
+						<a href="https://www.youtube.com/@METAMAGAGENCY" target="_blank" class="cursor-pointer text-white">Descubre Más</a>
+					</div>
+				</div>
+			</div>
+			<!--Right Col-->
+			<div class="w-full lg:w-6/12 lg:-mt-10 relative" id="girl">
+				<img data-aos="fade-up" data-aos-once="true" class="w-10/12 mx-auto 2xl:-mb-20" src="img/girl.png" />
+				<!-- calendar -->
+				<div data-aos="fade-up" data-aos-delay="300" data-aos-once="true"
+					class="absolute top-20 -left-6 sm:top-32 sm:left-10 md:top-40 md:left-16 lg:-left-0 lg:top-52 floating-4">
+					<img class="  bg-opacity-80 rounded-lg h-12 sm:h-16" src="img/icon 4.png">
+				</div>
+				<!-- red -->
+				<div data-aos="fade-up" data-aos-delay="400" data-aos-once="true"
+					class="absolute top-20 right-10 sm:right-24 sm:top-28 md:top-36 md:right-32 lg:top-32 lg:right-16 floating">
+					<img class=" bg-opacity-80 rounded-lg h-20 sm:h-28" src="img/icon 2.png" alt="">
+				</div>
+				<!-- ux class -->
+				<div data-aos="fade-up" data-aos-delay="500" data-aos-once="true"
+					class="absolute bottom-14 -left-4 sm:left-2 sm:bottom-20 lg:bottom-24 lg:-left-4 floating">
+					<img class=" bg-opacity-80 rounded-lg h-20 sm:h-28" src="img/icon 3.png" alt="">
+				</div>
+				<!-- congrats -->
+				<div data-aos="fade-up" data-aos-delay="600" data-aos-once="true"
+					class="absolute bottom-20 md:bottom-48 lg:bottom-52 -right-6 lg:right-8 floating-4">
+					<img class=" bg-opacity-80 rounded-lg h-12 sm:h-16" src="img/icon 1 metamag.png" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="text-white -mt-14 sm:-mt-24 lg:-mt-36 z-40 relative">
+			<svg class="xl:h-40 xl:w-full" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+				preserveAspectRatio="none">
+				<path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z"
+					fill="currentColor"></path>
+			</svg>
+			<div class="bg-white w-full h-20 -mt-px"></div>
+		</div>
+	</div>
+
+	<!-- container -->
+	<div class="container px-4 lg:px-8 mx-auto max-w-screen-xl text-gray-700 overflow-x-hidden">
+
+		<!-- trusted by 
+		<div class="max-w-4xl mx-auto">
+			<h1 class="text-center mb-3 text-gray-400 font-medium">Sumate a las comañias que creen en nosotros</h1>
+			<div class="grid grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center">
+				<img class="h-7" src="img/company/google.svg">
+				<img class="h-7" src="img/company/netflix.svg">
+				<img class="h-7" src="img/company/airbnb.svg">
+				<img class="h-7" src="img/company/airbnb.svg">
+				<!--<img class="h-7 transform translate-y-2" src="img/company/amazon.svg">
+			 	<img class="h-7" src="img/company/facebook.svg"> 
+		 	<img class="h-7" src="img/company/grab.svg"> 
+			</div>
+		</div>-->
+
+		<!-- All-In-One Cloud Software. -->
+		<div data-aos="flip-up" class="max-w-xl mx-auto text-center mt-24">
+			<h1 class="font-bold text-darken my-3 text-2xl">Nuestros Servicios</h1>
+			<p class="leading-relaxed text-gray-500">En Metamag Agency, ofrecemos una gama de soluciones estratégicas y
+				tecnológicas diseñadas para transformar y hacer crecer tu empresa. Nuestros servicios incluyen:</p>
+		</div>
+	 
+		<div class="grid md:grid-cols-4 gap-14 md:gap-5 mt-20">
+			<div data-aos="fade-up" class="bg-white shadow-xl p-6 text-center rounded-xl">
+				<div style="background: #FF5733;"
+					class="rounded-full w-16 h-16 flex items-center justify-center mx-auto shadow-lg transform -translate-y-12">
+					<svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" fill="white"/>
+					</svg>
+				</div>
+				<h1 class="font-medium text-xl mb-3 lg:px-14 text-darken">Marketing</h1>
+				<p class="px-4 text-gray-500">Estrategias de marketing digital para aumentar la visibilidad y el alcance de tu negocio.</p>
+			</div>
+			<div data-aos="fade-up" data-aos-delay="150" class="bg-white shadow-xl p-6 text-center rounded-xl">
+				<div style="background: #28A745;"
+					class="rounded-full w-16 h-16 flex items-center justify-center mx-auto shadow-lg transform -translate-y-12">
+					<svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" fill="white"/>
+					</svg>
+				</div>
+				<h1 class="font-medium text-xl mb-3 lg:px-14 text-darken">Growth y Softlanding</h1>
+				<p class="px-4 text-gray-500">Servicios de crecimiento y softlanding para expandir tu negocio en nuevos mercados.</p>
+			</div>
+			<div data-aos="fade-up" data-aos-delay="300" class="bg-white shadow-xl p-6 text-center rounded-xl">
+				<div style="background: #FFC107;"
+					class="rounded-full w-16 h-16 flex items-center justify-center mx-auto shadow-lg transform -translate-y-12">
+					<svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" fill="white"/>
+					</svg>
+				</div>
+				<h1 class="font-medium text-xl mb-3 lg:px-14 text-darken">Inteligencia Artificial</h1>
+				<p class="px-4 text-gray-500">Soluciones de inteligencia artificial para optimizar procesos y mejorar la toma de decisiones.</p>
+			</div>
+			<div data-aos="fade-up" data-aos-delay="450" class="bg-white shadow-xl p-6 text-center rounded-xl">
+				<div style="background: #17A2B8;"
+					class="rounded-full w-16 h-16 flex items-center justify-center mx-auto shadow-lg transform -translate-y-12">
+					<svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" fill="white"/>
+					</svg>
+				</div>
+				<h1 class="font-medium text-xl mb-3 lg:px-14 text-darken">Consultoría de Software</h1>
+				<p class="px-4 text-gray-500">Asesoramiento en desarrollo y optimización de software para mejorar la eficiencia de tu empresa.</p>
+			</div>
+		</div>
+		<!-- lorem -->
+		<div class="mt-28">
+			<div data-aos="flip-down" class="text-center max-w-screen-md mx-auto">
+				<h1 class="text-3xl font-bold mb-4">¿Qué es <span class="text-yellow-500">Metamag Agency?</span></h1>
+				<p class="text-gray-500">Metamag Agency es una agencia que ofrece soluciones estratégicas y tecnológicas para transformar y hacer crecer tu empresa. Desde marketing digital hasta inteligencia artificial, estamos aquí para ayudarte a alcanzar el éxito.</p>
+			</div>
+			<div data-aos="fade-up"
+				class="flex flex-col md:flex-row justify-center space-y-5 md:space-y-0 md:space-x-6 lg:space-x-10 mt-7">
+				<div class="relative md:w-5/12">
+					<img class="rounded-2xl" src="img/Rectangle 19.png" alt="">
+					<div class="absolute bg-black bg-opacity-20 bottom-0 left-0 right-0 w-full h-full rounded-2xl">
+						<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+							<h1 class="uppercase text-white font-bold text-center text-sm lg:text-xl mb-3">PARA EMPRESAS</h1>
+							<a href="mailto:ingenieramarie@metamagagency.com"
+								class="rounded-full text-white border text-xs lg:text-md px-6 py-3 w-full font-medium focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out">Comienza hoy</a>
+						</div>
+					</div>
+				</div>
+				<div class="relative md:w-5/12">
+					<img class="rounded-2xl" src="img/Rectangle 21.png" alt="">
+					<div class="absolute bg-black bg-opacity-20 bottom-0 left-0 right-0 w-full h-full rounded-2xl">
+						<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+							<h1 class="uppercase text-white font-bold text-center text-sm lg:text-xl mb-3">PARA CLIENTES</h1>
+							 
+								<a class="rounded-full text-white text-xs lg:text-md px-6 py-3 w-full font-medium focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out"
+								style="background: rgba(35, 189, 238, 0.9)" 
+								href="mailto:ingenieramarie@metamagagency.com" class="text-blue-400 hover:underline">Contáctanos</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="sm:flex items-center sm:space-x-8 mt-36">
+			<div data-aos="fade-right" class="sm:w-1/2 relative">
+				<div class="bg-yellow-500 rounded-full absolute w-12 h-12 z-0 -left-4 -top-3 animate-pulse"></div>
+				<h1 class="font-semibold text-2xl relative z-50 text-darken lg:pr-10">Todo lo que necesitas para <span class="text-yellow-500">transformar tu negocio digitalmente</span></h1>
+				<p class="py-5 lg:pr-32">Metamag Agency ofrece soluciones integrales de transformación digital para PYMES que buscan convertirse en gigantes tecnológicos, con servicios personalizados de inteligencia artificial, desarrollo de software y estrategias de crecimiento.</p>
+<!-- 				<a href="" class="underline">Conoce Más</a>
+ -->			</div>
+			<div data-aos="fade-left" class="sm:w-1/2 relative mt-10 sm:mt-0">
+				<img class="rounded-xl z-40 relative" src="img/metamag logo.jpg" alt="">
+			</div>
+		</div>
+		
+		<div class="md:flex mt-40 md:space-x-10 items-start">
+			<div data-aos="fade-down" class="md:w-7/12 relative">
+				<img class="rounded-xl z-40 relative" src="img/metodologia.webp" alt="">
+			</div>
+			<div data-aos="fade-down" class="md:w-5/12 mt-20 md:mt-0 text-gray-500">
+				<h1 class="text-2xl font-semibold text-darken lg:pr-40">Una <span class="text-yellow-500">metodología</span> diseñada para impulsar negocios</h1>
+				<div class="flex items-center space-x-5 my-5">
+					<div class="flex-shrink bg-white shadow-lg rounded-full p-3 flex items-center justify-center">
+						<svg class="w-4 h-4" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<img src="img/softwareicon.svg" class="w-5 h-5"  >
+
+						</svg>
+					</div>
+					<p>Implementación de soluciones de Inteligencia Artificial para optimizar procesos empresariales.</p>
+				</div>
+				<div class="flex items-center space-x-5 my-5">
+					<div class="flex-shrink bg-white shadow-lg rounded-full p-3 flex items-center justify-center">
+						<svg class="w-4 h-4" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<img src="img/ai.svg" class="w-5 h-5"  >
+						</svg>
+						
+					</div>
+					<p>Desarrollo de software personalizado que impulsa la productividad y escalabilidad.</p>
+				</div>
+				<div class="flex items-center space-x-5 my-5">
+					<div class="flex-shrink bg-white shadow-lg rounded-full p-3 flex items-center justify-center">
+						<svg class="w-4 h-4" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<img src="img/softlanding.svg" class="w-5 h-5"  >
+						</svg>
+					</div>
+					<p>Estrategias de growth hacking para maximizar el crecimiento de tu negocio.</p>
+				</div>
+			</div>
+		</div>
+	<!-- Servicios de Transformación Digital -->
+<div class="flex flex-col md:flex-row items-center md:space-x-10 mt-12">
+	<div data-aos="fade-right" class="md:w-1/2 lg:pl-14">
+		<h1 class="text-darken font-semibold text-3xl lg:pr-56"><span class="text-yellow-500">Softlanding</span> Empresarial</h1>
+		<p class="text-gray-500 my-4 lg:pr-32">Facilitamos la expansión de tu empresa a nuevos mercados con estrategias personalizadas, reduciendo riesgos y optimizando tu entrada en diferentes ecosistemas empresariales.</p>
+	</div>
+	<img data-aos="fade-left" class="md:w-1/2" src="img/softlanding.webp">
+ </div>
+ 
+ <!-- Growth Hacking -->
+ <div class="mt-5 flex flex-col-reverse md:flex-row items-center md:space-x-5">
+	<div data-aos="fade-right" class="md:w-6/12">
+		<img class="md:w-11/12" src="img/growth.png">
+	</div>
+	<div data-aos="fade-left" class="md:w-6/12 md:transform md:-translate-y-20">
+		<h1 class="font-semibold text-darken text-3xl lg:pr-64">Estrategias de <span class="text-yellow-500">Growth Hacking</span></h1>
+		<p class="text-gray-500 my-5 lg:pr-52">Diseñamos estrategias innovadoras para impulsar el crecimiento exponencial de tu negocio, utilizando técnicas de marketing digital y análisis de datos.</p>
+	</div>
+ </div>
+ 
+ <!-- Consultoría y Desarrollo de Software -->
+ <div class="flex flex-col md:flex-row items-center mt-5">
+	<div data-aos="fade-right" class="md:w-5/12">
+		<h1 class="text-darken font-semibold text-3xl leading-tight lg:pr-32"><span class="text-yellow-500">Consultoría</span> y Desarrollo de Software</h1>
+		<p class="my-5 lg:pr-14">Creamos soluciones de software a medida que transforman tus procesos internos, mejoran la eficiencia operativa y potencian la escalabilidad de tu negocio.</p>
+	</div>
+	<img data-aos="fade-left" class="md:w-7/12" src="img/software.png">
+ </div>
+ 
+ <!-- Inteligencia Artificial -->
+ <div class="mt-10 flex flex-col-reverse md:flex-row items-center md:space-x-10">
+	<div data-aos="fade-right" class="md:w-7/12">
+		<img class="md:w-11/12" src="img/ai.jpg">
+	</div>
+	<div data-aos="fade-left" class="md:w-5/12 md:transform md:-translate-y-6">
+		<h1 class="font-semibold text-darken text-3xl lg:pr-64">Soluciones de <span class="text-yellow-500">Inteligencia Artificial</span></h1>
+		<p class="text-gray-500 my-5 lg:pr-24">Implementamos tecnologías de IA avanzadas para optimizar tus procesos, tomar decisiones basadas en datos y crear ventajas competitivas significativas.</p>
+	</div>
+ </div>
+ 	 
+
+
+ <section class="py-20 bg-gray-50">
+	<div class="container mx-auto px-4">
+		<!-- Section Header -->
+		<div class="text-center max-w-3xl mx-auto mb-16">
+			<span class="text-yellow-500 font-semibold tracking-wider uppercase">Nuestro Equipo</span>
+			<h2 class="text-4xl font-bold mt-2 mb-4">Liderando la Innovación Digital</h2>
+			<p class="text-gray-600">Conoce a los expertos detrás de Metamag Agency, comprometidos con la excelencia y la innovación en cada proyecto.</p>
+		</div>
+
+		<!-- Team Grid -->
+		<div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12   ">
+			<!-- Marie Anne Grace -->
+			<div class="group">
+				<div class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300  ">
+					<img src="https://media.licdn.com/dms/image/v2/D4E03AQHIDRn4QKt2hg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712278956155?e=1741824000&v=beta&t=wUQOdExKPIJ7TX2o7skj2SM-vpQYMbtP685Dk3TKEVw" alt="Marie Anne Grace - CEO" class="w-full h-96 object-cover">
+					<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+						<div class="absolute bottom-0 left-0 right-0 p-6">
+							<h3 class="text-white text-2xl font-bold mb-1">Marie Anne Grace</h3>
+							<p class="text-yellow-400 text-lg mb-3">CEO & Growth Hacker</p>
+							<a href="https://www.linkedin.com/in/marieannegrace/" target="_blank" 
+							   class="inline-flex items-center space-x-2 text-white hover:text-yellow-400 transition-colors">
+								<i class="fab fa-linkedin text-xl"></i>
+								<span>Connect on LinkedIn</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="mt-6 p-6 bg-white rounded-xl shadow-md transform -translate-y-8 group-hover:-translate-y-12 transition-transform duration-300 ">
+					<p class="text-gray-600 leading-relaxed">
+						Experta en Growth Hacking y estrategias digitales, Marie lidera la visión innovadora de Metamag Agency, 
+						combinando conocimientos técnicos con perspicacia empresarial para impulsar el crecimiento de nuestros clientes.
+
+					</p>
+					 <!-- Social Links -->
+					 <div class="flex space-x-4  mt-10 ">
+						<a href="https://www.linkedin.com/in/marieannegrace/" target="_blank" 
+						   class="inline-flex items-center space-x-2  hover:text-yellow-400 transition-colors">
+							<i class="fab fa-linkedin text-xl"></i>
+							<span>LinkedIn</span>
+						</a>
+						<a href="https://medium.com/@marieannegrace" target="_blank" 
+						   class="inline-flex items-center space-x-2  hover:text-yellow-400 transition-colors">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" class="w-4 h-4">
+								<path d="M9.025 8c0 2.485-2.02 4.5-4.513 4.5A4.506 4.506 0 0 1 0 8c0-2.486 2.02-4.5 4.512-4.5A4.506 4.506 0 0 1 9.025 8zm4.95 0c0 2.34-1.01 4.236-2.256 4.236-1.246 0-2.256-1.897-2.256-4.236 0-2.34 1.01-4.236 2.256-4.236 1.246 0 2.256 1.897 2.256 4.236zM16 8c0 2.096-.355 3.795-.794 3.795-.438 0-.793-1.7-.793-3.795 0-2.096.355-3.795.794-3.795.438 0 .793 1.699.793 3.795z"/>
+							</svg>
+							<span>Medium</span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Luis Carlos Rojano -->
+			<div class="group ">
+				<div class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 min-h-96">
+					<img src="https://scontent.fbaq6-1.fna.fbcdn.net/v/t39.30808-6/463381210_10229099795651973_270631399101825985_n.png?_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=GNX93UDplusQ7kNvgEgqASt&_nc_zt=23&_nc_ht=scontent.fbaq6-1.fna&_nc_gid=AegjLuRSDpWPIp_kJqfi3Vj&oh=00_AYAyQqBhdyUt-00HbTTx9h5zD_MF44QM_ghLA7OdZWVOkw&oe=67851A4F" alt="Luis Carlos Rojano - CTO" class="w-full h-96 object-cover  object-right">
+					<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+						<div class="absolute bottom-0 left-0 right-0 p-6">
+							<h3 class="text-white text-2xl font-bold mb-1">Luis Carlos Rojano</h3>
+							<p class="text-yellow-400 text-lg mb-3">CTO & Software Engineer</p>
+							<a href="https://www.linkedin.com/in/lcrojano/" target="_blank" 
+							   class="inline-flex items-center space-x-2 text-white hover:text-yellow-400 transition-colors">
+								<i class="fab fa-linkedin text-xl"></i>
+								<span>Connect on LinkedIn</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="mt-6 p-6 bg-white rounded-xl shadow-md transform -translate-y-8 group-hover:-translate-y-12 transition-transform duration-300">
+					<p class="text-gray-600 leading-relaxed">
+						Como CTO y Software Engineer, Luis aporta su amplia experiencia en desarrollo de software y 
+						arquitectura tecnológica para crear soluciones innovadoras y escalables que impulsan el éxito digital.
+						<br>
+						<br>
+					</p>
+					<div class="flex space-x-4 mt-10">
+						<a href="https://www.linkedin.com/in/lcrojano/" target="_blank" 
+						   class="inline-flex items-center space-x-2  hover:text-yellow-400 transition-colors">
+							<i class="fab fa-linkedin text-xl"></i>
+							<span>LinkedIn</span>
+						</a>
+						<a href="https://medium.com/@lcrojano" target="_blank" 
+						   class="inline-flex items-center space-x-2  hover:text-yellow-400 transition-colors">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" class="w-4 h-4">
+								<path d="M9.025 8c0 2.485-2.02 4.5-4.513 4.5A4.506 4.506 0 0 1 0 8c0-2.486 2.02-4.5 4.512-4.5A4.506 4.506 0 0 1 9.025 8zm4.95 0c0 2.34-1.01 4.236-2.256 4.236-1.246 0-2.256-1.897-2.256-4.236 0-2.34 1.01-4.236 2.256-4.236 1.246 0 2.256 1.897 2.256 4.236zM16 8c0 2.096-.355 3.795-.794 3.795-.438 0-.793-1.7-.793-3.795 0-2.096.355-3.795.794-3.795.438 0 .793 1.699.793 3.795z"/>
+							</svg>
+							<span>Medium</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+	 
+ <div class="container mx-auto px-4 py-12 mt-10">
+	<div class="flex flex-col md:flex-row items-start md:space-x-10">
+		<div class="md:w-6/12 mb-8 md:mb-0">
+			<div class="flex items-center space-x-20 mb-5">
+				<span class="border border-gray-300 w-14 absolute"></span>
+				<h2 class="text-gray-400 tracking-widest text-sm">Conéctate con nosotros</h2>
+			</div>
+			
+			<h1 class="font-semibold text-2xl lg:pr-40 mb-6">
+				<a  href="https://www.instagram.com/metamag_agency/" target="_blank">Únete a nuestro <span class="text-yellow-500">ecosistema digital</span></a>
+			</h1>
+			
+			<p class="text-gray-500 mb-8 lg:pr-20">
+				Mantente conectado con Metamag Agency en todas las plataformas. Síguenos para obtener las últimas actualizaciones, conocimientos y contenido innovador en transformación digital.
+			</p>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+				<a href="https://www.instagram.com/metamag_agency/" target="_blank" 
+				   class="group flex items-center space-x-4 p-4 rounded-lg border border-gray-200 hover:border-yellow-500 transition-all duration-300 ease-in-out hover:shadow-md">
+					<i class="fab fa-instagram text-2xl text-gray-400 group-hover:text-yellow-500"></i>
+					<div>
+						<h3 class="font-medium text-gray-800">Instagram</h3>
+						<p class="text-sm text-gray-500">Sigue nuestro viaje creativo</p>
+					</div>
+				</a>
+
+				<a href="https://www.facebook.com/profile.php?id=61561307196300" target="_blank"
+				   class="group flex items-center space-x-4 p-4 rounded-lg border border-gray-200 hover:border-yellow-500 transition-all duration-300 ease-in-out hover:shadow-md">
+					<i class="fab fa-facebook text-2xl text-gray-400 group-hover:text-yellow-500"></i>
+					<div>
+						<h3 class="font-medium text-gray-800">Facebook</h3>
+						<p class="text-sm text-gray-500">Únete a nuestra comunidad</p>
+					</div>
+				</a>
+
+				<a href="https://medium.com/@marieannegrace" target="_blank"
+				   class="group flex items-center space-x-4 p-4 rounded-lg border border-gray-200 hover:border-yellow-500 transition-all duration-300 ease-in-out hover:shadow-md">
+					<i class="fab fa-medium text-2xl text-gray-400 group-hover:text-yellow-500"></i>
+					<div>
+						<h3 class="font-medium text-gray-800">Medium</h3>
+						<p class="text-sm text-gray-500">Lee nuestros artículos</p>
+					</div>
+				</a>
+
+				<a href="https://www.tiktok.com/@metamagagency?lang=es" target="_blank"
+				   class="group flex items-center space-x-4 p-4 rounded-lg border border-gray-200 hover:border-yellow-500 transition-all duration-300 ease-in-out hover:shadow-md">
+					<i class="fab fa-tiktok text-2xl text-gray-400 group-hover:text-yellow-500"></i>
+					<div>
+						<h3 class="font-medium text-gray-800">TikTok</h3>
+						<p class="text-sm text-gray-500">Mira nuestro contenido trending</p>
+					</div>
+				</a>
+
+				<a href="https://www.youtube.com/@Innohackerspodcast" target="_blank"
+				   class="group flex items-center space-x-4 p-4 rounded-lg border border-gray-200 hover:border-yellow-500 transition-all duration-300 ease-in-out hover:shadow-md">
+					<i class="fab fa-youtube text-2xl text-gray-400 group-hover:text-yellow-500"></i>
+					<div>
+						<h3 class="font-medium text-gray-800">YouTube</h3>
+						<p class="text-sm text-gray-500">Suscríbete a nuestro canal</p>
+					</div>
+				</a>
+			</div>
+		</div>
+
+		<div class="md:w-6/12">
+			<div class="bg-gray-50 p-8 rounded-lg">
+				<h3 class="text-xl font-semibold mb-4">¿Por qué conectar con nosotros?</h3>
+				<ul class="space-y-4">
+					<li class="flex items-center space-x-2">
+						<span class="w-2 h-2 bg-yellow-500 rounded-full"></span>
+						<span>Conocimientos expertos en transformación digital</span>
+					</li>
+					<li class="flex items-center space-x-2">
+						<span class="w-2 h-2 bg-yellow-500 rounded-full"></span>
+						<span>Últimas tendencias de la industria</span>
+					</li>
+					<li class="flex items-center space-x-2">
+						<span class="w-2 h-2 bg-yellow-500 rounded-full"></span>
+						<span>Contenido y recursos exclusivos</span>
+					</li>
+					<li class="flex items-center space-x-2">
+						<span class="w-2 h-2 bg-yellow-500 rounded-full"></span>
+						<span>Oportunidades de participación comunitaria</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- TESTIMONIAL -->
+<div class="mt-24 flex flex-col-reverse md:flex-row items-start md:space-x-10">
+    <div data-aos="zoom-in-right" class="md:w-5/12">
+        <div class="flex items-center space-x-20 mb-5">
+            <span class="border border-gray-300 w-14 absolute"></span>
+            <h1 class="text-gray-400 tracking-widest text-sm">TESTIMONIO</h1>
+        </div>
+        <h1 class="font-semibold text-darken text-2xl lg:pr-40">Lo que dicen nuestros clientes</h1>
+        <p class="text-gray-500 my-5 lg:pr-36">"Metamag Agency transformó nuestra estrategia digital completamente. 
+			Pasamos de ser una PYME tradicional a una empresa tecnológicamente competitiva.  - Robottel S.A.S"</p>
+        <p class="text-gray-500 my-5 lg:pr-36">Nuestros clientes han experimentado crecimientos significativos gracias a nuestras soluciones</p>
+        <p class="text-gray-500 my-5 lg:pr-36">¿Quieres conocer cómo podemos ayudar a tu empresa?</p>
+      <a  
+		  
+		href="mailto:ingenieramarie@metamagagency.com" class="text-blue-400 hover:underline">  <button
+            class="flex items-center space-x-3 pl-3 border-b border-l border-t border-yellow-500 text-yellow-500 font-medium my-4 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out rounded-full">
+            <span>Contáctanos</span>
+            <div class="border border-yellow-500 h-14 w-14 rounded-full flex items-center justify-center">
+                <svg class="w-5 h-5" viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M25.7071 8.70711C26.0976 8.31658 26.0976 7.68342 25.7071 7.2929L19.3431 0.928934C18.9526 0.538409 18.3195 0.538409 17.9289 0.928934C17.5384 1.31946 17.5384 1.95262 17.9289 2.34315L23.5858 8L17.9289 13.6569C17.5384 14.0474 17.5384 14.6805 17.9289 15.0711C18.3195 15.4616 18.9526 15.4616 19.3431 15.0711L25.7071 8.70711ZM-8.74228e-08 9L25 9L25 7L8.74228e-08 7L-8.74228e-08 9Z"
+                        fill="#F48C06" />
+                </svg>
+            </div>
+		</button>	</a>    </div>
+    <div data-aos="zoom-in-left" class="md:w-7/12">
+        <img class="md:w-10/12 mx-auto" src="img/testimonials.png">
+    </div>
+</div>
+
+		<!-- Últimas Noticias y Recursos -->
+<div data-aos="zoom-in" class="mt-16 text-center">
+    <h1 class="text-darken text-2xl font-semibold">Últimas Noticias y Recursos</h1>
+    <p class="text-gray-500 my-5">Descubre los avances más recientes en tecnología e innovación empresarial</p>
+</div>
+<div data-aos="zoom-in-up" class="my-14 flex flex-col lg:flex-row lg:space-x-20">
+    <div class="lg:w-6/12">
+        <img class="w-full mb-6" src="img/3d-globe-map-isolated-white-background_1017-42674.avif">
+        <span class="bg-yellow-300 text-darken font-semibold px-4 py-px text-sm rounded-full">TRANSFORMACIÓN DIGITAL</span>
+        <h1 class="text-gray-800 font-semibold my-3 text-xl">PYMES latinoamericanas aceleran su transformación digital con IA</h1>
+        <p class="text-gray-500 mb-3">Según un informe reciente del BID, las pequeñas y medianas empresas en Latinoamérica están implementando soluciones de inteligencia artificial para mejorar su competitividad.</p>
+        <a href="https://clubdeempresas.com/mundo/pymes-en-latinoamerica-aceleran-su-digitalizacion-con-ia-generativa-nid-9804" target="_blank" class="underline">Leer más</a>
+    </div>
+    <div class="lg:w-7/12 flex flex-col justify-between mt-12 space-y-5 lg:space-y-0 lg:mt-0">
+        <div class="flex space-x-5">
+            <div class="w-4/12">
+                <div class="relative">
+                    <img class="rounded-xl w-full" src="img/ia.jpeg">
+                    <span class="absolute bottom-2 right-2 bg-yellow-300 text-darken font-semibold px-4 py-px text-sm rounded-full hidden sm:block">INNOVACIÓN</span>
+                </div>
+            </div>
+            <div class="w-8/12">
+                <h1 class="text-gray-800 text-sm sm:text-lg font-semibold">La IA revoluciona el Growth Hacking</h1>
+                <p class="text-gray-500 my-2 sm:my-4 text-xs sm:text-md">una sola persona ahora puede lograr el impacto de un equipo. <a href="https://www.eleconomista.es/tecnologia/noticias/12882634/06/24/la-ia-revoluciona-el-growth-hacking-una-sola-persona-ahora-puede-lograr-el-impacto-de-un-equipo.html" target="_blank" class="underline">Aprende más</a></p>
+            </div>
+        </div>
+        <div class="flex space-x-5">
+            <div class="w-4/12">
+                <div class="relative">
+                    <img class="rounded-xl w-full" src="img/hero.png">
+                    <span class="absolute bottom-2 right-2 bg-yellow-300 text-darken font-semibold px-4 py-px text-sm rounded-full hidden sm:block">TECNOLOGÍA</span>
+                </div>
+            </div>
+            <div class="w-8/12">
+                <h1 class="text-gray-800 text-sm sm:text-lg font-semibold">Las 9 tendencias de la Cuarta Revolución Industrial en el desarrollo de software</h1>
+                <p class="text-gray-500 my-2 sm:my-4 text-xs sm:text-md">el 2025 estará marcado por nueve tendencias que redefinirán el futuro del software, desde la productividad en el desarrollo hasta la sostenibilidad y la ciberseguridad <a href="https://revistaclevel.com/las-9-tendencias-de-la-cuarta-revolucion-industrial-en-el-desarrollo-de-software"  target="_blank"class="underline">Descubre más</a></p>
+            </div>
+        </div>
+        <div class="flex space-x-5">
+            <div class="w-4/12">
+                <div class="relative">
+                    <img class="rounded-xl w-full" src="img/softlanding.jpeg">
+                    <span class="absolute bottom-2 right-2 bg-yellow-300 text-darken font-semibold px-4 py-px text-sm rounded-full hidden sm:block">EMPRENDIMIENTO</span>
+                </div>
+            </div>
+            <div class="w-8/12">
+                <h1 class="text-gray-800 text-sm sm:text-lg font-semibold">Las tres etapas del Soft Landing</h1>
+                <p class="text-gray-500 my-2 sm:my-4 text-xs sm:text-md">El “soft landing” es un proceso estratégico fundamental para las empresas que desean expandirse internacionalmente de manera exitosa y sostenible. <a href="https://es.linkedin.com/pulse/las-tres-etapas-del-soft-landing-mariano-maltese-vllnf" target="_blank" class="underline">Leer más</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+	</div>
+	<!-- .container -->
+
+    <footer class="mt-32 text-white" style="background-color: rgba(37, 38, 65, 1);">
+        <div class="max-w-6xl mx-auto px-4">
+            <!-- Logo Section -->
+            <div class="flex py-12 justify-center items-center">
+                <div class="relative">
+                    <h1 class="font-bold text-xl pr-5 relative z-50">Metamag</h1>
+					<p class="font-bold text-xl pr-5 relative z-50">NIT.: 901.884.098-2</p>
+                    <svg class="w-11 h-11 absolute -top-2 -left-3 z-40" viewBox="0 0 79 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M35.9645 2.94975C37.9171 0.997129 41.0829 0.997127 43.0355 2.94975L76.0502 35.9645C78.0029 37.9171 78.0029 41.0829 76.0503 43.0355L43.0355 76.0502C41.0829 78.0029 37.9171 78.0029 35.9645 76.0503L2.94975 43.0355C0.997129 41.0829 0.997127 37.9171 2.94975 35.9645L35.9645 2.94975Z" stroke="#fff" stroke-width="2"/>
+                    </svg>
+                </div>
+                <span class="border-l border-gray-500 text-sm pl-5 py-2 font-semibold">
+                    Agencia de Marketing Digital y Desarrollo de Software
+                </span>
+            </div>
+
+            <!-- Contact Grid Section -->
+            <div class="grid md:grid-cols-2 gap-8 py-12 border-t border-gray-700">
+                <!-- Contact Information -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-semibold mb-6">Información de Contacto</h3>
+                    
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-map-marker-alt mt-1 text-yellow-500"></i>
+                        <div>
+                            <h4 class="font-semibold mb-1">Ubicación</h4>
+                            <p class="text-gray-300">Barranquilla, Atlántico</p>
+                            <p class="text-gray-300 text-sm mt-1">La Puerta de Oro de Colombia</p>
+                            <div class="mt-3 space-y-1 text-sm text-gray-400">
+                                <p>• Ciudad del Carnaval Patrimonio Cultural</p>
+                                <p>• Hub de Innovación del Caribe</p>
+                                <p>• Puerto Industrial y Comercial</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-phone mt-1 text-yellow-500"></i>
+                        <div>
+                            <h4 class="font-semibold mb-1">Teléfono</h4>
+                            <a href="tel:+573052951053" class="text-gray-300 hover:text-white transition-colors">
+                                +57 305 295 1053
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-envelope mt-1 text-yellow-500"></i>
+                        <div>
+                            <h4 class="font-semibold mb-1">Correo Electrónico</h4>
+                            <div class="space-y-1">
+                                <a href="mailto:admin@metamagagency.com" class="text-gray-300 hover:text-white transition-colors block">
+                                    admin@metamagagency.com
+                                </a>
+                                <a href="mailto:ingenieramarie@metamagagency.com" class="text-gray-300 hover:text-white transition-colors block">
+                                    ingenieramarie@metamagagency.com
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-clock mt-1 text-yellow-500"></i>
+                        <div>
+                            <h4 class="font-semibold mb-1">Horario de Atención</h4>
+                            <p class="text-gray-300">Lunes - Viernes: 9:00 AM - 6:00 PM</p>
+                            <p class="text-gray-300">Sábado: 9:00 AM - 1:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map Section - Now showing Barranquilla region -->
+                <div class="w-full h-80 rounded-lg overflow-hidden">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125066.91644815863!2d-74.85821889550781!3d11.003092799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d44d12ae605%3A0x2633844581b917b2!2sBarranquilla%2C%20Atlantico%2C%20Colombia!5e0!3m2!1sen!2sus!4v1644945128000!5m2!1sen!2sus"
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        class="rounded-lg">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Copyright Section -->
+            <div class="text-center border-t border-gray-700 py-8">
+                <p class="text-gray-400 text-sm">&copy; 2024 Metamag Agency. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+	
+	<!-- Agrega tu formulario JavaScript para Mailgun -->
+	<script>
+document.getElementById('mailgun-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const recipient = this.querySelector('input[name="recipient"]').value;
+
+    // Direct workflow dispatch without needing additional tokens
+    fetch('https://api.github.com/repos/lcrojano/metamagagency.com/actions/workflows/send-email.yml/dispatches', {
+        method: 'POST',
+        headers: {
+            'Authorization': 'Basic ' + btoa('api'),
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            ref: 'main',
+            inputs: {
+                recipient: recipient,
+                subject: 'Bienvenido a METAMAG AGENCY - Información Exclusiva para Ti'
+            }
+        })
+    })
+    .then(response => {
+        if (response.ok) {
+            showModal('¡Gracias por subscribirte!', 'Pronto te llegará un correo de bienvenida de parte de METAMAG AGENCY');
+            this.reset();
+        } else {
+            throw new Error('Failed to send email');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Hubo un problema al enviar tu suscripción. Por favor, intenta de nuevo.');
+    });
+});
+
+function showModal(title, message) {
+    var modal = document.createElement('div');
+    modal.className = 'modal';
+    modal.innerHTML = `
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>${title}</h2>
+            <p>${message}</p>
+        </div>
+    `;
+    document.body.appendChild(modal);
+    modal.style.display = 'block';
+
+    modal.querySelector('.close').addEventListener('click', function() {
+        document.body.removeChild(modal);
+    });
+}
+
+	</script>
+	 
+	
+	
+
+	<!-- AOS init -->
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
+</body>
+
+</html>
