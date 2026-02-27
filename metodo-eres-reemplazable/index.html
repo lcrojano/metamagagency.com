@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERES REEMPLAZABLE — El método para convertirte en la única opción | Marie Anne Grace</title>
+    <meta name="description"
+        content="Y a tu cliente le importas un carajo. El método para convertirte en la única opción de tus clientes sin bajar tus precios. Por Marie Anne Grace, CEO de Metamag Agency.">
+    <meta name="author" content="Marie Anne Grace">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Spline 3D Viewer -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.61/build/spline-viewer.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+                    colors: {
+                        book: {
+                            orange: '#FF6B00',
+                            'orange-dark': '#E55A00',
+                            'orange-light': '#FF8A33',
+                            black: '#0A0A0A',
+                            'black-light': '#141414',
+                            cream: '#FAFAF5',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-12px)' } },
+                        pulseGlow: { '0%,100%': { boxShadow: '0 0 20px rgba(255,107,0,.3)' }, '50%': { boxShadow: '0 0 40px rgba(255,107,0,.6)' } }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --orange: #FF6B00;
+        }
+
+        .btn-book {
+            background: linear-gradient(135deg, #FF6B00 0%, #E55A00 100%);
+            color: #fff;
+            font-weight: 700;
+            transition: all .3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-book:hover {
+            background: linear-gradient(135deg, #E55A00 0%, #CC4D00 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px -5px rgba(255, 107, 0, .5);
+        }
+
+        .btn-book-outline {
+            border: 2px solid rgba(255, 107, 0, .5);
+            color: #FF6B00;
+            font-weight: 600;
+            transition: all .3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-book-outline:hover {
+            background: rgba(255, 107, 0, .1);
+            border-color: #FF6B00;
+            transform: translateY(-2px);
+        }
+
+        .card-problem {
+            background: #141414;
+            border: 1px solid rgba(255, 107, 0, .15);
+            transition: all .4s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .card-problem:hover {
+            border-color: rgba(255, 107, 0, .5);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px -12px rgba(255, 107, 0, .2);
+        }
+
+        .check-item::before {
+            content: '✓';
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.75rem;
+            height: 1.75rem;
+            min-width: 1.75rem;
+            background: rgba(255, 107, 0, .15);
+            color: #FF6B00;
+            font-weight: 800;
+            font-size: .8rem;
+            border-radius: 50%;
+            margin-right: .75rem;
+        }
+
+        .diagonal-bg {
+            background-image: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(255, 107, 0, .03) 40px, rgba(255, 107, 0, .03) 42px);
+        }
+
+        /* ── Spline global background ──────────────────── */
+        #spline-bg {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            /* pass mouse to content above */
+            width: 100%;
+            height: 100%;
+        }
+
+        #spline-bg spline-viewer {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        /* Dark overlay so copy stays readable */
+        #spline-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none;
+            background: linear-gradient(to bottom,
+                    rgba(10, 10, 10, .55) 0%,
+                    rgba(10, 10, 10, .45) 50%,
+                    rgba(10, 10, 10, .72) 100%);
+        }
+
+        /* All sections sit above spline */
+        body>*:not(#spline-bg):not(#spline-overlay) {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Scroll animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity .7s ease, transform .7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: opacity .7s ease, transform .7s ease;
+        }
+
+        .reveal-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Scroll progress */
+        #book-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            z-index: 200;
+            background: linear-gradient(90deg, #FF6B00, #FF8A33, #FF6B00);
+            transition: width .1s linear;
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased" style="background:#0A0A0A; color:#FAFAF5">
+
+    <!-- Fixed Spline 3D Background -->
+    <div id="spline-bg">
+        <spline-viewer hint loading-anim-type="none" url="https://prod.spline.design/Oio3zrDGlkm6VQOO/scene.splinecode"
+            events-target="global">
+        </spline-viewer>
+    </div>
+    <!-- Overlay for readability -->
+    <div id="spline-overlay"></div>
+
+    <!-- Progress bar -->
+    <div id="book-progress" style="width:0%;z-index:300"></div>
+
+    <!-- ═══════════════════════ STICKY NAV ═══════════════════════ -->
+    <nav class="fixed top-0 w-full z-50 transition-all duration-300" id="book-nav"
+        style="background:rgba(10,10,10,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,107,0,.1)">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-14">
+            <a href="/" class="flex items-center gap-2 group">
+                <img src="/img/metamag-logo-white.png" alt="Metamag"
+                    class="w-8 h-8 object-contain opacity-70 group-hover:opacity-100 transition-opacity">
+                <span
+                    class="text-sm font-bold text-white/70 group-hover:text-white transition-colors hidden sm:inline">Metamag
+                    Agency</span>
+            </a>
+            <div class="flex items-center gap-4">
+                <a href="#comprar" class="btn-book px-5 py-2 rounded-full text-sm">
+                    <i class="fas fa-shopping-cart mr-2 text-xs"></i>Comprar Libro
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════ HERO — ATP ═══════════════════════ -->
+    <section id="hero-book" class="relative min-h-screen flex items-center overflow-hidden pt-14">
+        <!-- Hero glow accent (subtle, on top of global bg) -->
+        <div
+            class="absolute top-1/3 -left-40 w-[500px] h-[500px] bg-orange-600/10 rounded-full blur-3xl pointer-events-none">
+        </div>
+        <div
+            class="absolute bottom-1/4 -right-40 w-[400px] h-[400px] bg-orange-500/8 rounded-full blur-3xl pointer-events-none">
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+                <!-- Copy -->
+                <div class="text-center lg:text-left order-2 lg:order-1">
+                    <div
+                        class="inline-flex items-center px-4 py-2 bg-orange-500/10 border border-orange-500/25 rounded-full text-orange-400 text-xs font-bold uppercase tracking-wider mb-8">
+                        <i class="fas fa-fire mr-2"></i>Nuevo libro · Direct Response
+                    </div>
+
+                    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black leading-[0.95] mb-6">
+                        <span class="text-orange-500">ERES</span><br>
+                        <span class="text-white">REEMPLAZABLE</span>
+                    </h1>
+
+                    <p class="text-xl sm:text-2xl text-gray-300 leading-relaxed mb-2">
+                        Y a tu cliente le importas <span class="text-orange-400 font-black">un carajo.</span>
+                    </p>
+                    <p class="text-lg text-gray-500 mb-10 max-w-lg mx-auto lg:mx-0">
+                        El método para convertirte en la <strong class="text-white">única opción</strong> de tus
+                        clientes (sin bajar tus precios).
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#comprar" class="btn-book px-8 py-4 rounded-full text-lg animate-pulse-glow">
+                            <i class="fas fa-shopping-cart mr-2"></i>Comprar el Libro Ahora
+                        </a>
+                        <a href="#problema" class="btn-book-outline px-8 py-4 rounded-full text-lg">
+                            <i class="fas fa-arrow-down mr-2"></i>¿En cuál mentira vives?
+                        </a>
+                    </div>
+
+                    <p class="text-gray-600 text-xs mt-8">Por Marie Anne Grace · Ingeniera · CEO de Metamag Agency
+                        S.A.S. BIC</p>
+                </div>
+
+                <!-- Book 3D -->
+                <div class="flex justify-center order-1 lg:order-2">
+                    <div class="relative">
+                        <div class="absolute -inset-12 bg-orange-500/15 rounded-full blur-3xl"></div>
+                        <img src="/img/book/libro 3d floating.jpeg" alt="ERES REEMPLAZABLE — Libro por Marie Anne Grace"
+                            class="relative w-72 sm:w-96 drop-shadow-2xl animate-float">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-600">
+            <span class="text-xs uppercase tracking-widest">Scroll</span>
+            <i class="fas fa-chevron-down text-orange-500 animate-bounce"></i>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════ PROBLEMA ═══════════════════════ -->
+    <section id="problema" class="py-20 sm:py-28 relative">
+        <div class="absolute inset-0 diagonal-bg"></div>
+        <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <div
+                    class="inline-flex items-center px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full text-orange-400 text-xs font-bold uppercase tracking-wider mb-6">
+                    <i class="fas fa-bug mr-2"></i>El Bug del Impostor
+                </div>
+                <h2 class="text-4xl sm:text-5xl font-black text-white leading-tight mb-4">
+                    ¿En cuál de estas mentiras<br><span class="text-orange-400">estás viviendo hoy?</span>
+                </h2>
+                <p class="text-xl text-gray-500 max-w-2xl mx-auto">Tres perfiles. Todos llevan al mismo lugar: ser
+                    reemplazable.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Card 1 -->
+                <div class="card-problem rounded-2xl p-8 reveal" style="transition-delay:.1s">
+                    <div class="w-14 h-14 bg-orange-500/15 rounded-2xl flex items-center justify-center text-2xl mb-6">
+                        💼</div>
+                    <h3 class="text-xl font-black text-orange-400 mb-3">EL EMPLEO SEGURO</h3>
+                    <p class="text-gray-400 leading-relaxed">Tu empresa te ve como una <strong class="text-white">celda
+                            en Excel.</strong> Una IA puede hacer tu trabajo. Tu "estabilidad" es una ilusión con fecha
+                        de vencimiento.</p>
+                    <div class="mt-6 pt-6 border-t border-orange-500/10">
+                        <p class="text-xs text-gray-600 italic">"Si mañana no existes, la empresa sigue funcionando."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card-problem rounded-2xl p-8 reveal" style="transition-delay:.2s">
+                    <div class="w-14 h-14 bg-orange-500/15 rounded-2xl flex items-center justify-center text-2xl mb-6">
+                        🎓</div>
+                    <h3 class="text-xl font-black text-orange-400 mb-3">EL ETERNO ESTUDIANTE</h3>
+                    <p class="text-gray-400 leading-relaxed">Coleccionas diplomas esperando que <strong
+                            class="text-white">lluevan clientes,</strong> pero te gana alguien con la mitad de tu
+                        talento y el doble de visibilidad.</p>
+                    <div class="mt-6 pt-6 border-t border-orange-500/10">
+                        <p class="text-xs text-gray-600 italic">"Más diplomas, mismos ingresos."</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card-problem rounded-2xl p-8 reveal" style="transition-delay:.3s">
+                    <div class="w-14 h-14 bg-orange-500/15 rounded-2xl flex items-center justify-center text-2xl mb-6">
+                        🎭</div>
+                    <h3 class="text-xl font-black text-orange-400 mb-3">EL EXPERTO IMPOSTOR</h3>
+                    <p class="text-gray-400 leading-relaxed">Cobras barato <strong class="text-white">por
+                            miedo,</strong> escondiendo tu solución de quienes la necesitan. Dejas dinero en la mesa
+                        todos los días.</p>
+                    <div class="mt-6 pt-6 border-t border-orange-500/10">
+                        <p class="text-xs text-gray-600 italic">"Si no cobras lo que vales, alguien más cobra lo que no
+                            vale."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12 reveal">
+                <a href="#solucion" class="btn-book px-8 py-4 rounded-full text-lg">
+                    <i class="fas fa-arrow-down mr-2"></i>Ver la salida
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════ SOLUCIÓN ═══════════════════════ -->
+    <section id="solucion" class="py-20 sm:py-28 relative" style="background:#0f0f0f">
+        <div class="absolute inset-0 diagonal-bg"></div>
+        <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal-left">
+                    <div
+                        class="inline-flex items-center px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full text-orange-400 text-xs font-bold uppercase tracking-wider mb-6">
+                        <i class="fas fa-cogs mr-2"></i>Lo que aprenderás
+                    </div>
+                    <h2 class="text-4xl sm:text-5xl font-black text-white leading-tight mb-6">
+                        El sistema para dejar de ser <span class="text-orange-400">reemplazable</span>
+                    </h2>
+                    <p class="text-lg text-gray-500 mb-10">No es motivación. No es filosofía. Es un método con pasos
+                        concretos.</p>
+
+                    <div class="space-y-5">
+                        <div class="flex items-start check-item text-gray-300 text-lg leading-relaxed">
+                            Por qué competir por precio es una <strong class="text-white">trampa mortal</strong> (y cómo
+                            salir de ella).
+                        </div>
+                        <div class="flex items-start check-item text-gray-300 text-lg leading-relaxed">
+                            El método exacto para posicionarte como <strong class="text-orange-300">LA única
+                                opción</strong> en tu mercado.
+                        </div>
+                        <div class="flex items-start check-item text-gray-300 text-lg leading-relaxed">
+                            Cómo hacer que los clientes <strong class="text-white">te busquen a TI</strong> (sin
+                            perseguirlos).
+                        </div>
+                        <div class="flex items-start check-item text-gray-300 text-lg leading-relaxed">
+                            Las estrategias de marca personal de los <strong class="text-orange-300">profesionales mejor
+                                pagados.</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal flex justify-center">
+                    <div class="relative">
+                        <div class="absolute -inset-8 bg-orange-500/10 rounded-3xl blur-2xl"></div>
+                        <div class="relative bg-book-black-light border border-orange-500/20 rounded-3xl p-8 sm:p-10">
+                            <div class="text-6xl mb-6 text-center">🎯</div>
+                            <h3 class="text-2xl font-black text-white text-center mb-4">El Resultado</h3>
+                            <p class="text-gray-400 text-center leading-relaxed mb-6">Dejas de ser una opción más. Te
+                                conviertes en <strong class="text-orange-400">LA opción.</strong> Tus clientes pagan lo
+                                que vales sin negociar.</p>
+                            <div class="grid grid-cols-2 gap-4 text-center">
+                                <div class="bg-orange-500/10 rounded-xl p-4">
+                                    <p class="text-2xl font-black text-orange-400">0</p>
+                                    <p class="text-xs text-gray-500">Descuentos necesarios</p>
+                                </div>
+                                <div class="bg-orange-500/10 rounded-xl p-4">
+                                    <p class="text-2xl font-black text-orange-400">100%</p>
+                                    <p class="text-xs text-gray-500">Tu valor percibido</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════ PRUEBA SOCIAL ═══════════════════════ -->
+    <section class="py-20 sm:py-24 relative" style="background:#0a0a0a">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+            <div
+                class="inline-flex items-center px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full text-orange-400 text-xs font-bold uppercase tracking-wider mb-10">
+                <i class="fas fa-quote-left mr-2"></i>Prueba Social
+            </div>
+
+            <div class="relative">
+                <div class="absolute -inset-6 bg-orange-500/5 rounded-3xl blur-xl"></div>
+                <blockquote class="relative bg-book-black-light border border-orange-500/15 rounded-3xl p-10 sm:p-14">
+                    <div class="text-5xl text-orange-500/30 mb-6">"</div>
+                    <p class="text-2xl sm:text-3xl font-black text-white leading-tight mb-8">
+                        Este libro es un <span class="text-orange-400">sistema.</span> No es teoría, motivación, ni
+                        filosofía.
+                    </p>
+                    <div class="flex items-center justify-center gap-4">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-700 rounded-full flex items-center justify-center text-white font-black text-xl">
+                            R</div>
+                        <div class="text-left">
+                            <p class="text-white font-bold">Roberto Rojano</p>
+                            <p class="text-gray-500 text-sm">ROBOTTEL S.A.S · Empresario</p>
+                        </div>
+                    </div>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════ AUTORA ═══════════════════════ -->
+    <section id="autora" class="py-20 sm:py-28 relative" style="background:#0f0f0f">
+        <div class="absolute inset-0 diagonal-bg"></div>
+        <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+                <!-- Photo -->
+                <div class="reveal flex justify-center">
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-orange-500/15 rounded-3xl blur-2xl"></div>
+                        <img src="/img/book/marie-beach.jpg" alt="Marie Anne Grace — Autora de ERES REEMPLAZABLE"
+                            class="relative w-full max-w-md rounded-3xl shadow-2xl border-2 border-orange-500/20 object-cover"
+                            style="aspect-ratio:4/5;object-position:center top">
+                    </div>
+                </div>
+
+                <!-- Bio -->
+                <div class="reveal-left">
+                    <div
+                        class="inline-flex items-center px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full text-orange-400 text-xs font-bold uppercase tracking-wider mb-6">
+                        <i class="fas fa-user mr-2"></i>La Autora
+                    </div>
+                    <h2 class="text-4xl sm:text-5xl font-black text-white leading-tight mb-6">
+                        Marie Anne <span class="text-orange-400">Grace</span>
+                    </h2>
+                    <p class="text-xl text-gray-300 leading-relaxed mb-6">
+                        <strong class="text-white">Ingeniera Industrial</strong> · CEO de Metamag Agency S.A.S. BIC ·
+                        Growth Hacker
+                    </p>
+                    <p class="text-lg text-gray-500 leading-relaxed mb-8">
+                        7 años transformando PYMEs en gigantes digitales usando ingeniería de growth y filosofía BIC. No
+                        vende motivación — construye sistemas de posicionamiento que funcionan. Metamag nació de la
+                        misma obsesión que este libro: <strong class="text-gray-300">hacer que lo que vales se note
+                            desde el primer segundo.</strong>
+                    </p>
+
+                    <div class="grid grid-cols-3 gap-4 mb-8">
+                        <div class="bg-orange-500/10 rounded-xl p-4 text-center">
+                            <p class="text-2xl font-black text-orange-400">7+</p>
+                            <p class="text-xs text-gray-500">Años de experiencia</p>
+                        </div>
+                        <div class="bg-orange-500/10 rounded-xl p-4 text-center">
+                            <p class="text-2xl font-black text-orange-400">BIC</p>
+                            <p class="text-xs text-gray-500">Empresa con propósito</p>
+                        </div>
+                        <div class="bg-orange-500/10 rounded-xl p-4 text-center">
+                            <p class="text-2xl font-black text-orange-400">CEO</p>
+                            <p class="text-xs text-gray-500">Metamag Agency</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <a href="https://www.linkedin.com/in/marieannegrace/" target="_blank"
+                            class="bg-book-black-light border border-orange-500/20 hover:border-orange-400 text-white px-4 py-2 rounded-lg text-sm transition-all flex items-center gap-2">
+                            <i class="fab fa-linkedin"></i>LinkedIn
+                        </a>
+                        <a href="https://www.instagram.com/metamag_agency/" target="_blank"
+                            class="bg-book-black-light border border-orange-500/20 hover:border-orange-400 text-white px-4 py-2 rounded-lg text-sm transition-all flex items-center gap-2">
+                            <i class="fab fa-instagram"></i>Instagram
+                        </a>
+                        <a href="https://medium.com/@marieannegrace" target="_blank"
+                            class="bg-book-black-light border border-orange-500/20 hover:border-orange-400 text-white px-4 py-2 rounded-lg text-sm transition-all flex items-center gap-2">
+                            <i class="fab fa-medium"></i>Medium
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════ CTA FINAL ═══════════════════════ -->
+    <section id="comprar" class="py-20 sm:py-28 relative overflow-hidden" style="background:#0a0a0a">
+        <div class="absolute inset-0 diagonal-bg"></div>
+        <!-- Glow -->
+        <div
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-orange-500/15 rounded-full blur-3xl">
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
+                    Deja de ser <span class="text-orange-400">reemplazable.</span><br>Hoy.
+                </h2>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                    Cada día que no implementas un sistema de posicionamiento, el mercado te pone precio. <strong
+                        class="text-white">Este libro te da las herramientas para que tú pongas el tuyo.</strong>
+                </p>
+            </div>
+
+            <!-- CTA Card -->
+            <div class="max-w-2xl mx-auto reveal">
+                <div class="relative">
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-orange-500 via-orange-400 to-orange-600 rounded-3xl blur opacity-30">
+                    </div>
+                    <div
+                        class="relative bg-book-black-light border border-orange-500/30 rounded-3xl p-8 sm:p-12 text-center">
+
+                        <img src="/img/book/libro 3d floating.jpeg" alt="ERES REEMPLAZABLE"
+                            class="w-48 mx-auto mb-8 drop-shadow-2xl">
+
+                        <h3 class="text-3xl font-black text-white mb-2">ERES REEMPLAZABLE</h3>
+                        <p class="text-gray-400 mb-8">Y a tu cliente le importas un carajo.</p>
+
+                        <div class="grid sm:grid-cols-2 gap-4 mb-8">
+                            <div class="bg-orange-500/10 border border-orange-500/20 rounded-2xl p-6">
+                                <i class="fas fa-book text-orange-400 text-2xl mb-3"></i>
+                                <h4 class="text-white font-bold mb-1">Libro Físico</h4>
+                                <p class="text-gray-500 text-sm mb-4">Envío a toda Colombia</p>
+                                <a href="mailto:ingenieramarie@metamagagency.com?subject=Quiero el libro ERES REEMPLAZABLE (Físico)"
+                                    class="btn-book w-full py-3 rounded-xl text-sm">
+                                    <i class="fas fa-shopping-cart mr-2"></i>Pedir Físico
+                                </a>
+                            </div>
+                            <div class="bg-orange-500/10 border border-orange-500/20 rounded-2xl p-6">
+                                <i class="fas fa-tablet-alt text-orange-400 text-2xl mb-3"></i>
+                                <h4 class="text-white font-bold mb-1">Versión Digital</h4>
+                                <p class="text-gray-500 text-sm mb-4">Descarga inmediata (PDF)</p>
+                                <a href="mailto:ingenieramarie@metamagagency.com?subject=Quiero el libro ERES REEMPLAZABLE (Digital)"
+                                    class="btn-book w-full py-3 rounded-xl text-sm">
+                                    <i class="fas fa-download mr-2"></i>Pedir Digital
+                                </a>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-600 text-xs">Próximamente en Amazon · Escríbenos para reservar tu copia.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Urgency -->
+            <div class="text-center mt-12 reveal">
+                <p class="text-gray-500 text-lg">
+                    <i class="fas fa-clock text-orange-500 mr-2"></i>Cada minuto que pasa sin posicionarte, <strong
+                        class="text-white">el mercado te pone precio.</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+    <footer class="py-10 border-t border-orange-500/10" style="background:#050505">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-3">
+                    <img src="/img/metamag-logo-white.png" alt="Metamag" class="w-8 h-8 object-contain opacity-50">
+                    <p class="text-gray-600 text-sm">© 2025 Metamag Agency S.A.S. BIC · Todos los derechos reservados
+                    </p>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="/" class="text-gray-600 hover:text-orange-400 text-sm transition-colors">Inicio</a>
+                    <a href="https://www.instagram.com/metamag_agency/" target="_blank"
+                        class="text-gray-600 hover:text-orange-400 transition-colors"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/marieannegrace/" target="_blank"
+                        class="text-gray-600 hover:text-orange-400 transition-colors"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="mailto:ingenieramarie@metamagagency.com"
+                        class="text-gray-600 hover:text-orange-400 transition-colors"><i
+                            class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ═══════════════════════ JAVASCRIPT ═══════════════════════ -->
+    <script>
+            (function () {
+                'use strict';
+
+                // Scroll progress
+                const bar = document.getElementById('book-progress');
+                function updateProgress() {
+                    const s = window.scrollY, t = document.documentElement.scrollHeight - window.innerHeight;
+                    bar.style.width = (t > 0 ? (s / t) * 100 : 0) + '%';
+                }
+
+                // Reveal on scroll
+                const revealObs = new IntersectionObserver((entries) => {
+                    entries.forEach(e => {
+                        if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); }
+                    });
+                }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+                document.querySelectorAll('.reveal, .reveal-left').forEach(el => revealObs.observe(el));
+
+                // Smooth scroll
+                document.querySelectorAll('a[href^="#"]').forEach(a => {
+                    a.addEventListener('click', function (e) {
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+                    });
+                });
+
+                window.addEventListener('scroll', updateProgress, { passive: true });
+                updateProgress();
+            })();
+    </script>
+</body>
+
+</html>
