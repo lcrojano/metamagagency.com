@@ -115,6 +115,15 @@
             box-shadow: 0 10px 25px -5px rgba(245, 158, 11, .4);
         }
 
+        .glow-continuous {
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(245, 159, 11, 0.267); }
+            50% { box-shadow: 0 0 40px rgba(253, 182, 60, 0.8); }
+        }
+
         /* ── Card ──────────────────────────────────────── */
         .card-hover {
             transition: all .3s cubic-bezier(.4, 0, .2, 1);
@@ -710,10 +719,16 @@
                             extendible, auditable y con capacidad de operación soberana sin dependencia de
                             conectividad externa ni costos de licencia perpetuos a proveedores extranjeros.
                         </p>
-                        <a href="https://calendly.com/metamagagency" target="_blank"
-                            class="btn-accent px-8 py-4 rounded-full font-bold text-md shadow-[0_0_20px_rgba(245,158,11,0.4)]">
-                            <i class="fas fa-calendar-check mr-2"></i>Hablar con un experto GIS
-                        </a>
+                        <div class="flex flex-col sm:flex-row gap-4 ">
+                            <a href="https://calendly.com/metamagagency" target="_blank"
+                                class="btn-accent px-8 py-4 rounded-full font-bold text-md shadow-[0_0_20px_rgba(245,158,11,0.4)] w-full text-center">
+                                <i class="fas fa-calendar-check mr-2"></i>Hablar con un experto GIS
+                            </a>
+                            <a href="https://dossier-gis.metamagagency.com/" target="_blank"
+                                class="btn-accent px-8 py-4 rounded-full font-bold text-md glow-continuous w-full text-center">
+                                <i class="fas fa-eye mr-2"></i>Ver dossier y caso de éxito
+                            </a>
+                        </div>
                     </div>
                     <!-- Visual -->
                     <div
