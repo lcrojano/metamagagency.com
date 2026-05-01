@@ -978,7 +978,7 @@
                             </div>
                             <span class="text-xs text-white/70">15 págs.</span>
                         </div>
-                        <h3 class="text-xl font-black mt-4 mb-1">Informe BIC 2024</h3>
+                        <h3 class="text-xl font-black mt-4 mb-1">Informe BIC <span class="current-year"></span> </h3>
                         <p class="text-white/80 text-sm">Investigación detallada sobre proyectos estratégicos con
                             enfoque en sostenibilidad, impacto social y ODS.</p>
                     </div>
@@ -1259,7 +1259,7 @@
             <!-- Bottom bar -->
             <div
                 class="border-t border-white/10 py-6 flex flex-col sm:flex-row justify-between items-center gap-2 text-sm text-white/50">
-                <p>© 2025 Metamag Agency S.A.S BIC. Todos los derechos reservados.</p>
+                <p>© <span class="current-year"></span> Metamag Agency S.A.S BIC. Todos los derechos reservados.</p>
                 <p>Transformación Digital · GIS · IA · Growth</p>
             </div>
         </div>
@@ -1373,6 +1373,12 @@
 
                 /* ── Navbar NIT text color on initial state ────────── */
                 if (window.scrollY < 60 && navNit) navNit.style.color = 'rgba(255,255,255,0.6)';
+
+                /* ── Current year in footer ───────────────────────── */
+                const currentYearEl = document.getElementsByClassName('current-year');
+                for (let i = 0; i < currentYearEl.length; i++) {
+                    if (currentYearEl[i]) currentYearEl[i].textContent = new Date().getFullYear();
+                }
             })();
     </script>
 </body>
